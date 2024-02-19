@@ -1,7 +1,7 @@
 public class BUKUSAFRIZAL {
     public static void main(String[] args) {
         
-        tampilinformasi();
+        // tampilinformasi;
     }
     //Atribut
     String jdl, pengarang;
