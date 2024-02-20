@@ -13,6 +13,8 @@ public class BukuMainSAFRIZAL {
         bk1.terjual(5); 
         bk1.gantiHarga(60000); 
         bk1.tampilInformasi(); 
+
+        Buku bk2 = new Buku("KANTAL", "" );
     }
 }
 
