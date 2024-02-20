@@ -1,0 +1,108 @@
+/**
+ * BukuSafrizalRahman
+ */
+public class BukuSafrizalRahman {
+
+    
+public class BukuSafrizalRahman {
+    //Atribut    
+    String jdl, pengarang;
+    int halaman, stok, harga, hitungHargaBayar, hitungHargaDiskon, hitungDiskon;
+    
+    public BukuSafrizalRahman(){
+
+    }
+    
+    
+    public BukuSafrizalRahman(String jdul, String pgg, int hlm, int stok, int hg){
+    
+        jdl = jdul;
+        pengarang = pgg;
+        halaman = hlm;
+        this.stok = stok;
+        harga = hg;
+    
+    
+    }
+    
+    void tampilinformasi(){
+        System.out.println("Judul BUku Yaw = " + jdl);
+        //System.out.println("===============================================");
+        //System.out.println("===============================================");
+        System.out.println("Pengarang Buku yaw = " + pengarang);
+        System.out.println("Jumlah Halaman Bukunye Berapa = " + halaman);
+        //System.out.println("===============================================");
+        //System.out.println("===============================================");
+        System.out.println("Sisa Stok Berapa Bos = " + stok);
+        System.out.println("HargaNyee = " +  harga);
+        //System.out.println("===============================================");
+        //System.out.println("===============================================");
+    }
+    
+    // void terjual(int jmlh){
+    //     stok -= jmlh;
+    // }
+    
+    //Setelah DImodif 
+    // void terjual(int jmlh){
+    //     if(stok > 0){
+    //         stok -= jmlh;
+    //     } else {
+    //         System.out.println("Stok habis, Belum Kulakan.");
+    //     }
+    // }
+    void terjual(int jml){
+        stok -= jml;
+    }
+    
+    void Kulakan(int jmlh){
+        stok += jmlh;
+    }
+    
+    void gantiHarga(int jmlh){
+        stok -= jmlh;
+    }
+    
+    public BukuSafrizalRahman(String jdul, String pgg, int hlm, int stok, int hg){
+    
+        jdl = jdul;
+        pengarang = pgg;
+        halaman = hlm;
+        this.stok = stok;
+        harga = hg;
+    
+    
+    }
+
+      // Menghitung harga total
+      public int hitungHargaTotal(int jmlh) {
+        return jmlh * harga;
+    }
+
+    // Menghitung diskon
+    public int hitungDiskon(int total) {
+        int diskon;
+        if (total > 150000) {
+            diskon = total * 12 / 100;
+        } else if (total > 75000) {
+            diskon = total * 5 / 100;
+        } else {
+            diskon = 0;
+        }
+        return diskon;
+    }
+
+    // Menghitung harga bayar
+    public int hitungHargaBayar(int total, int diskon) {
+        return total - diskon;
+    }
+    // public static void main(String[] args) {
+    //     String mahaSewa = " Safrizal ";
+
+    //     BukuSafrizal BukuMainSafrizal = new BukuSafrizal("20 th Century Girl", "Kim Boesook", 160, 29,  45000);
+
+    //     // BukuSafrizal bukuSafrizalRahman = new BukuSafrizal("Judul Buku Baru", "Pengarang Baru", 250, 50, 75000);
+
+    // }
+    }
+}
